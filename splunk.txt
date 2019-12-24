@@ -1,0 +1,28 @@
+Review the Webapp Log
+
+Look through the webapp logs and see if you can identify any suspicious activity. Note how the information is presented in a text file so you can notice the difference once you import the logs into the correlation tool.
+
+Viewing the log, on each line, you can see:
+
+The IP address of the webserver visited
+When the site was visited (local system time-stamped)
+GET request for item/page (with path to item/page)
+Server status code (200 == OK)
+User-agent/browser used to request item/page (Firefox, Opera)
+
+
+In these logs you can see:
+
+Time/date stamp from the mail server for each item
+Server "name" (mailsv1)
+Daemon used for sending logged item in (sshd)
+Error alert verbiage (Failed…)
+In this case we are seeing someone/thing attempting to try multiple accounts and passwords against the mail server via SSH.
+
+
+
+You have now looked at the logs provided and can begin to formulate what has happened. List out what you believe happened during this security event and compare with a classmate once you are completed.
+
+Based off of the searches we performed, we noticed that there were numerous attempts to gain ssh access to the mail server. We then noticed a user had clicked on a link that downloaded an application onto his computer - this happened on the same system that was reported to have suffered from erratic system behavior. Once the application was downloaded, it attempted to create a user called gam3r and then add it to the administrator group. After the user was added to the administrator group, the attacker would have full access to the machine. However, thanks to your sharp eye in catching the activity the application will be removed from the system and mitigations will be put into place in order to stop future breaches via this same program.
+
+Congrats!

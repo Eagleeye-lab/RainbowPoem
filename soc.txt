@@ -1,0 +1,504 @@
+https://www.youtube.com/watch?v=GtovwKDemnI
+https://www.youtube.com/watch?v=U9i7rWV-Gxo&t=23s
+
+password
+
+welcome1
+oracle
+==============================================================================
+https://www.youtube.com/watch?v=68t07-KOH9Y  ---top 10 wireshark filters
+==============
+in filters , shows any packets to or from any ip address ============ip.addr(adress)    ip.src(source)   ip.dst(destination) ip.addre === 10.0.0.145
+             
+             type  tcp or http NOT tcp and http
+             for udp or tcp port number=======tcp.port===443   udp.port=80
+             type  tcp.port == 443
+             tcp.analysis.flgs ============packet loss on the network[problems wireshark has identifed in a trace file]
+             !(arp or dns or icmp) =========removing noise in a trace file[pruning th race file]
+             capture,follow the tcp string
+             type tcp contains facebook displays any traffice in the trace file that is communicating with facebook
+             http.request means all http request involved in the trace files
+             http.response.code == 200, http.response.code == 300, http.response.code == 500 etc
+             http.response.code == 200 means all http request thta have been successful
+             tcp.flags.syn == 1 menas show me all syns....
+
+==============
+For example i want to capture the packets from 1:00:10 AM to 1:20:10 AM
+frame.time >= "Aug 24, 2017 1:00:10" && frame.time <= "Aug 24, 2017 1:20:10"
+==============
+what are the filters to find external IP addresses? and how can we find network gateways?
+One way to find external addresses is to "NOT" filter your internal ones as a source. You can use a filter like this -      !(ip.src == 10.0.0.0/8)          This will display all packets inbound from external IPs that are not a part of your subnet range. Hope that helps. As far as gateways - check out the destination MAC address of outbound traffic. Thanks for the comment!
+
+
+How did you add Delta as one of the columns ?
+You can learn how to do that on this video on my channel - https://youtu.be/FHO8SdKighY
+
+==============================================================================  
+Wireshark is used for anallysing traffic
+
+https://www.youtube.com/watch?v=e1NAL5q6PDE
+
+
+https://www.youtube.com/watch?v=U9i7rWV-Gxo&t=19s
+
+=========
+https://www.youtube.com/watch?v=1lDfCRM6dWk    ......1
+https://www.youtube.com/watch?v=hWc-ddF5g1I    ......2
+https://www.youtube.com/watch?v=tN1YzH9Wb4Q&t=83s.....3
+
+https://www.youtube.com/watch?v=F2HAPAUqitc      nigerian guy
+https://www.youtube.com/channel/UC-0PMn0rKV_ZOHF-qX6N3fQ nigeriian guy
+https://www.youtube.com/watch?v=1lDfCRM6dWk......1
+ 
+tcpdump -A -vvv -i eth5 port 80 -w http.pcap
+-tttt timestamp option
+-c 5 means capture capture 5 packets
+-n means show me numbers
+
+-v verbose
+-vvv 
+https://www.youtube.com/watch?v=e1NAL5q6PDE
+
+tcpdump for capture
+wireshark for analyse
+
+
+https://www.youtube.com/watch?v=2a9UCXGs87E
+
+TCP dump allows you to be able to sniff traffic.
+It is good to have TCP dump in my arsenal
+
+allows you to sniff traffic from layer to 7 on the OSI model
+speficy lan which u want to use-
+tcpdump -i eth0s
+
+use verbose option - v [or can save into a file]
+===============================================================================
+Hands on lab
+
+https://www.cbtnuggets.com/signup
+
+===============================================================================
+               TCPDUMP.....PACKET Sniffer, packet analyser   virtual,pysical,wireless networks
+
+https://www.youtube.com/watch?v=NsaMXr72cqo
+https://www.youtube.com/watch?v=R3kl85QFG0w
+https://www.youtube.com/watch?v=1CaYHeMrCiA
+
+tcpdump -i means what is your interface [eth0]
+tcpdump -i eth0 -v means display in verbose mode
+tcpdump -i eth0 -v host 192.168.1.1  [ then press enter ] or tcpdump -i eth0s -v host 192.168.1.1 > tcpcapture.log
+
+tcpdump -i eth0 -v src 192.168.11.20 means capture packets from that source ip address
+tcpdump -i eth0 -v dest 192.168.120.20 means capture packets from that destination ip address
+tcpdump -i eth0s -v net 192.168.110.30 means capture packets from all ip in network
+
+
+====
+cain and able -penetratiron testing in distribution
+====
+help
+
+
+
+Penetration testing tool
+====
+https://www.youtube.com/watch?v=3Kq1MIfTWCE
+
+https://www.youtube.com/watch?v=dz7Ntp7KQGA.... Ethical hacking...metaxploit, nmap, sql injection, backdoors
+penetration testing, cross site xcripting, dos, sql injection, stegenanography, how to discuss ethical
+50 interview questions.
+============================================================================= 
+ourse 01 - Packet Capturing
+Course 02 - Layer 2 Attacks
+Course 03 - Layer 3 Attacks on Cisco Based Infrastructures
+Course 04 - Pivoting and Relays
+Course 05 - IPv6 Attacks
+Course 06 - VPN Attacks
+Course 07 - Defeating SSL
+Course 08 - IDS/IPS Evasion
+
+
+https://www.youtube.com/watch?v=3Kq1MIfTWCE&t=9s   pen testing
+
+===============================================================================
+for ip in `se 1 254`
+do
+ ping -c 1 $1.$ip | grep "64 bytes " | cut -d " " -f 4 | tr -d ":" &
+done
+
+
+./filename.sh 192.168.1....
+
+https://www.youtube.com/watch?v=3Kq1MIfTWCE&t=9s
+https://www.youtube.com/watch?v=3Kq1MIfTWCE&t=9s   pen testing
+https://www.youtube.com/watch?v=WnN6dbos5u8
+
+=================================================================================
+https://www.youtube.com/watch?v=l77AgiphUQo
+
+=================================================================================
+https://www.appknox.com/blog/best-practices-security-operations-center
+
+https://www.youtube.com/watch?v=68t07-KOH9Y=====most used command
+=============
+https://www.youtube.com/watch?v=3Kq1MIfTWCE&t=5693s
+https://www.youtube.com/watch?v=15wDU3Wx1h0====slow packet
+https://www.youtube.com/watch?v=HGcbhCVZ8MU====TCP handshake
+https://www.youtube.com/watch?v=HCHFX5O1IaQ====How TCP works
+https://www.youtube.com/watch?v=t5OJephyw8I====tcp reset...how tcp works
+https://www.youtube.com/watch?v=cIxr8zosTBc====spurious transmission
+https://www.youtube.com/watch?v=UBfSgjUCEi0====case study
+
+https://www.youtube.com/watch?v=21_IYz4npRs====get username with passwords
+
+
+
+==============================================================================
+https://www.youtube.com/watch?v=68t07-KOH9Y  ---top 10 wireshark filters
+==============
+in filters , shows any packets to or from any ip address ============ip.addr(adress)    ip.src(source)   ip.dst(destination) ip.addre === 10.0.0.145
+             
+             type  tcp or http NOT tcp and http
+             for udp or tcp port number=======tcp.port===443   udp.port=80
+             type  tcp.port == 443
+             tcp.analysis.flgs ============packet loss on the network[problems wireshark has identifed in a trace file]
+             !(arp or dns or icmp) =========removing noise in a trace file[pruning th race file]
+             capture,follow the tcp string
+             type tcp contains facebook displays any traffice in the trace file that is communicating with facebook
+             http.request means all http request involved in the trace files
+             http.response.code == 200, http.response.code == 300, http.response.code == 500 etc
+             http.response.code == 200 means all http request thta have been successful
+             tcp.flags.syn == 1 menas show me all syns....
+
+==============
+For example i want to capture the packets from 1:00:10 AM to 1:20:10 AM
+frame.time >= "Aug 24, 2017 1:00:10" && frame.time <= "Aug 24, 2017 1:20:10"
+==============
+what are the filters to find external IP addresses? and how can we find network gateways?
+One way to find external addresses is to "NOT" filter your internal ones as a source. You can use a filter like this -      !(ip.src == 10.0.0.0/8)          This will display all packets inbound from external IPs that are not a part of your subnet range. Hope that helps. As far as gateways - check out the destination MAC address of outbound traffic. Thanks for the comment!
+
+
+How did you add Delta as one of the columns ?
+You can learn how to do that on this video on my channel - https://youtu.be/FHO8SdKighY
+
+==============================================================================  
+
+https://www.youtube.com/watch?v=3Kq1MIfTWCE&t=5715s    ....pen test
+
+
+Wireshark is used for anallysing traffic
+
+https://www.youtube.com/watch?v=e1NAL5q6PDE
+
+
+https://www.youtube.com/watch?v=U9i7rWV-Gxo&t=19s
+=========
+https://www.youtube.com/watch?v=1lDfCRM6dWk    ......1
+https://www.youtube.com/watch?v=hWc-ddF5g1I    ......2
+https://www.youtube.com/watch?v=tN1YzH9Wb4Q&t=83s.....3
+
+https://www.youtube.com/watch?v=F2HAPAUqitc      nigerian guy
+https://www.youtube.com/channel/UC-0PMn0rKV_ZOHF-qX6N3fQ nigeriian guy
+
+https://www.youtube.com/watch?v=tN1YzH9Wb4Q    nigerian guy
+...or type wireshark tcpdump analysis in youtube search bar
+
+https://www.youtube.com/watch?v=HoYgPlmOZgo   TSHARK / termshark
+...or type wireshark tcpdump analysis in youtube search bar
+https://www.youtube.com/watch?v=sO3V6QMzYX8   
+...or type wireshark tcpdump analysis in youtube search bar
+ 
+tcpdump -A -vvv -i eth5 port 80 -w http.pcap
+-tttt timestamp option
+-c 5 means capture capture 5 packets
+
+-v verbose
+-vvv 
+https://www.youtube.com/watch?v=e1NAL5q6PDE
+
+LDAP
+
+
+https://www.youtube.com/watch?v=2a9UCXGs87E
+
+TCP dump allows you to be able to sniff traffic.
+It is good to have TCP dump in my arsenal
+
+allows you to sniff traffic from layer to 7 on the OSI model
+speficy lan which u want to use-
+tcpdump -i eth0s
+
+use verbose option - v [or can save into a file]
+===============================================================================
+Hands on lab
+
+https://www.cbtnuggets.com/signup
+
+===============================================================================
+               TCPDUMP.....PACKET Sniffer, packet analyser   virtual,pysical,wireless networks
+
+https://www.youtube.com/watch?v=NsaMXr72cqo
+https://www.youtube.com/watch?v=R3kl85QFG0w
+https://www.youtube.com/watch?v=1CaYHeMrCiA
+
+tcpdump -i means what is your interface [eth0]
+tcpdump -i eth0 -v means display in verbose mode
+tcpdump -i eth0 -v host 192.168.1.1  [ then press enter ] or tcpdump -i eth0s -v host 192.168.1.1 > tcpcapture.log
+
+tcpdump -i eth0 -v src 192.168.11.20 means capture packets from that source ip address
+tcpdump -i eth0 -v dest 192.168.120.20 means capture packets from that destination ip address
+tcpdump -i eth0s -v net 192.168.110.30 means capture packets from all ip in network
+
+
+====
+cain and able -penetratiron testing in distribution
+====
+help
+
+
+
+Penetration testing tool
+====
+https://www.youtube.com/watch?v=3Kq1MIfTWCE
+
+https://www.youtube.com/watch?v=dz7Ntp7KQGA.... Ethical hacking...metaxploit, nmap, sql injection, backdoors
+penetration testing, cross site xcripting, dos, sql injection, stegenanography, how to discuss ethical
+50 interview questions.
+============================================================================= 
+ourse 01 - Packet Capturing
+Course 02 - Layer 2 Attacks
+Course 03 - Layer 3 Attacks on Cisco Based Infrastructures
+Course 04 - Pivoting and Relays
+Course 05 - IPv6 Attacks
+Course 06 - VPN Attacks
+Course 07 - Defeating SSL
+Course 08 - IDS/IPS Evasion
+
+
+https://www.youtube.com/watch?v=3Kq1MIfTWCE&t=9s   pen testing
+
+===============================================================================
+for ip in `se 1 254`
+do
+ ping -c 1 $1.$ip | grep "64 bytes " | cut -d " " -f 4 | tr -d ":" &
+done
+
+
+./filename.sh 192.168.1....
+
+https://www.youtube.com/watch?v=3Kq1MIfTWCE&t=9s
+https://www.youtube.com/watch?v=3Kq1MIfTWCE&t=9s   pen testing
+https://www.youtube.com/watch?v=WnN6dbos5u8
+
+=================================================================================
+https://www.youtube.com/watch?v=l77AgiphUQo
+
+================================================================================= 
+https://www.appknox.com/blog/best-practices-security-operations-center
+
+https://www.youtube.com/watch?v=68t07-KOH9Y=====most used command
+=============
+https://www.youtube.com/watch?v=3Kq1MIfTWCE&t=5693s
+https://www.youtube.com/watch?v=15wDU3Wx1h0====slow packet
+https://www.youtube.com/watch?v=HGcbhCVZ8MU====TCP handshake
+https://www.youtube.com/watch?v=HCHFX5O1IaQ====How TCP works
+https://www.youtube.com/watch?v=t5OJephyw8I====tcp reset...how tcp works
+https://www.youtube.com/watch?v=cIxr8zosTBc====spurious transmission
+https://www.youtube.com/watch?v=UBfSgjUCEi0====case study
+
+https://www.youtube.com/watch?v=21_IYz4npRs====get username with passwords
+
+
+
+==============================================================================
+https://www.youtube.com/watch?v=68t07-KOH9Y  ---top 10 wireshark filters
+==============
+in filters , shows any packets to or from any ip address ============ip.addr(adress)    ip.src(source)   ip.dst(destination) ip.addre === 10.0.0.145
+             
+             type  tcp or http NOT tcp and http
+             for udp or tcp port number=======tcp.port===443   udp.port=80
+             type  tcp.port == 443
+             tcp.analysis.flgs ============packet loss on the network[problems wireshark has identifed in a trace file]
+             !(arp or dns or icmp) =========removing noise in a trace file[pruning th race file]
+             capture,follow the tcp string
+             type tcp contains facebook displays any traffice in the trace file that is communicating with facebook
+             http.request means all http request involved in the trace files
+             http.response.code == 200, http.response.code == 300, http.response.code == 500 etc
+             http.response.code == 200 means all http request thta have been successful
+             tcp.flags.syn == 1 menas show me all syns....
+
+==============
+For example i want to capture the packets from 1:00:10 AM to 1:20:10 AM
+frame.time >= "Aug 24, 2017 1:00:10" && frame.time <= "Aug 24, 2017 1:20:10"
+==============
+what are the filters to find external IP addresses? and how can we find network gateways?
+One way to find external addresses is to "NOT" filter your internal ones as a source. You can use a filter like this -      !(ip.src == 10.0.0.0/8)          This will display all packets inbound from external IPs that are not a part of your subnet range. Hope that helps. As far as gateways - check out the destination MAC address of outbound traffic. Thanks for the comment!
+
+
+How did you add Delta as one of the columns ?
+You can learn how to do that on this video on my channel - https://youtu.be/FHO8SdKighY
+
+==============================================================================  
+
+https://www.youtube.com/watch?v=3Kq1MIfTWCE&t=5715s    ....pen test
+
+
+Wireshark is used for anallysing traffic
+
+https://www.youtube.com/watch?v=e1NAL5q6PDE
+
+
+https://www.youtube.com/watch?v=U9i7rWV-Gxo&t=19s
+=========
+https://www.youtube.com/watch?v=1lDfCRM6dWk    ......1
+https://www.youtube.com/watch?v=hWc-ddF5g1I    ......2
+https://www.youtube.com/watch?v=tN1YzH9Wb4Q&t=83s.....3
+
+https://www.youtube.com/watch?v=F2HAPAUqitc      nigerian guy
+https://www.youtube.com/channel/UC-0PMn0rKV_ZOHF-qX6N3fQ nigeriian guy
+
+https://www.youtube.com/watch?v=tN1YzH9Wb4Q    nigerian guy
+...or type wireshark tcpdump analysis in youtube search bar
+
+https://www.youtube.com/watch?v=HoYgPlmOZgo   TSHARK / termshark
+...or type wireshark tcpdump analysis in youtube search bar
+https://www.youtube.com/watch?v=sO3V6QMzYX8   
+...or type wireshark tcpdump analysis in youtube search bar
+ 
+tcpdump -A -vvv -i eth5 port 80 -w http.pcap
+-tttt timestamp option
+-c 5 means capture capture 5 packets
+
+-v verbose
+-vvv 
+https://www.youtube.com/watch?v=e1NAL5q6PDE
+
+LDAP
+
+
+https://www.youtube.com/watch?v=2a9UCXGs87E
+
+TCP dump allows you to be able to sniff traffic.
+It is good to have TCP dump in my arsenal
+
+allows you to sniff traffic from layer to 7 on the OSI model
+speficy lan which u want to use-
+tcpdump -i eth0s
+
+use verbose option - v [or can save into a file]
+===============================================================================
+Hands on lab
+
+https://www.cbtnuggets.com/signup
+
+===============================================================================
+               TCPDUMP.....PACKET Sniffer, packet analyser   virtual,pysical,wireless networks
+
+https://www.youtube.com/watch?v=NsaMXr72cqo
+https://www.youtube.com/watch?v=R3kl85QFG0w
+https://www.youtube.com/watch?v=1CaYHeMrCiA
+
+tcpdump -i means what is your interface [eth0]
+tcpdump -i eth0 -v means display in verbose mode
+tcpdump -i eth0 -v host 192.168.1.1  [ then press enter ] or tcpdump -i eth0s -v host 192.168.1.1 > tcpcapture.log
+
+tcpdump -i eth0 -v src 192.168.11.20 means capture packets from that source ip address
+tcpdump -i eth0 -v dest 192.168.120.20 means capture packets from that destination ip address
+tcpdump -i eth0s -v net 192.168.110.30 means capture packets from all ip in network
+
+
+====
+cain and able -penetratiron testing in distribution
+====
+help
+
+
+
+Penetration testing tool
+====
+https://www.youtube.com/watch?v=3Kq1MIfTWCE
+
+https://www.youtube.com/watch?v=dz7Ntp7KQGA.... Ethical hacking...metaxploit, nmap, sql injection, backdoors
+penetration testing, cross site xcripting, dos, sql injection, stegenanography, how to discuss ethical
+50 interview questions.
+============================================================================= 
+ourse 01 - Packet Capturing
+Course 02 - Layer 2 Attacks
+Course 03 - Layer 3 Attacks on Cisco Based Infrastructures
+Course 04 - Pivoting and Relays
+Course 05 - IPv6 Attacks
+Course 06 - VPN Attacks
+Course 07 - Defeating SSL
+Course 08 - IDS/IPS Evasion
+
+
+https://www.youtube.com/watch?v=3Kq1MIfTWCE&t=9s   pen testing
+
+===============================================================================
+for ip in `se 1 254`
+do
+ ping -c 1 $1.$ip | grep "64 bytes " | cut -d " " -f 4 | tr -d ":" &
+done
+
+
+./filename.sh 192.168.1....
+
+https://www.youtube.com/watch?v=3Kq1MIfTWCE&t=9s
+https://www.youtube.com/watch?v=3Kq1MIfTWCE&t=9s   pen testing
+https://www.youtube.com/watch?v=WnN6dbos5u8
+
+=================================================================================
+https://www.youtube.com/watch?v=l77AgiphUQo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
